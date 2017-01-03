@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/do';
 import { SportsapiApi } from '../../assets/trubet-sports-ng2-client/api/api';
 import { Sport } from '../../assets/trubet-sports-ng2-client/model/Sport';
 import * as models from '../../assets/trubet-sports-ng2-client/model/models';
+import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'app-sports',
