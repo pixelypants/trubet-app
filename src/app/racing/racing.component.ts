@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as models from '../../assets/typescript-angular2-client/model/models';
+import * as models from '../../assets/trubet-sports-ng2-client/model/models';
 
 import 'rxjs/add/operator/do';
 
