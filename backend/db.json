@@ -1,0 +1,28 @@
+{
+  "user": {
+    "name": "Johno",
+    "balance": 69
+  },
+  "betSlip": {
+    "bets": [
+      {
+        "title": "TeamX (WIN)",
+        "description": "Melb. BB, TeamX vs TeamY",
+        "cost": 12,
+        "type": "Sport"
+      },
+      {
+        "title": "PlayerX (WIN)",
+        "description": "Int. Tennis, PlayerX vs PlayerY",
+        "cost": 7,
+        "type": "Sport"
+      },
+      {
+        "title": "Horse #12 (WIN)",
+        "description": "'Unleashed' to Win - 300 mtrs",
+        "cost": 4,
+        "type": "Racing"
+      }
+    ]
+  }
+}
