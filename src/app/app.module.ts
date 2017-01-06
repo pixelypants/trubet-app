@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 
 import { routing } from './app.routes';
+import { BetslipComponent } from './betslip/betslip.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BetslipComponent,
   ],
   imports: [
     BrowserModule
