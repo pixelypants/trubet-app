@@ -1,7 +1,7 @@
 import { User } from './user.model';
-import { BetSlip } from './betslip.model';
+import { Bet } from './bet.model';
 
 export interface AppState {
   user: User;
-  betSlip: BetSlip;
+  bets: Array<Bet>;
 }

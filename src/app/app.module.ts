@@ -8,6 +8,10 @@ import { CoreModule } from './core/core.module';
 
 import { routing } from './app.routes';
 import { BetslipComponent } from './betslip/betslip.component';
+import { BetDataService } from './services/bet.data.service';
+import { SharedModule } from './shared/shared.module';
+import { BetReducer } from './reducers/bet.reducer';
+import { BetsReducer } from './reducers/betSlip.reducer';
 
 @NgModule({
   declarations: [
@@ -21,8 +25,10 @@ import { BetslipComponent } from './betslip/betslip.component';
     , CoreModule
     , routing
     , NgbModule.forRoot()
+    , SharedModule
+    ,
   ],
-  providers: [],
+  providers: [BetDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

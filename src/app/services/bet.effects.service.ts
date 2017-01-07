@@ -30,8 +30,8 @@ export class BetEffectsService {
   @Effect() init$ = this.updates$
     .whenAction(Actions.INIT_BETS)
     .switchMap(() => this.betDataService.getBets().mergeMap(bets => Observable.from(bets))
-      .map(res => ({ type: 'ADD_NOTE_FROM_SERVER', payload: res }))
-      .catch(() => Observable.of({ type: 'FETCH_FAILED' }))
+      .map(res => ({ type: Actions.ADD_BET_FROM_SERVER, payload: res }))
+      .catch(() => Observable.of({ type: Actions.FETCH_FAILED }))
     );
 
 

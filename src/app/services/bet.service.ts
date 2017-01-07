@@ -8,7 +8,7 @@ import 'node-uuid';
 import { Bet } from '../models/bet.model';
 import { Observable } from 'rxjs/Observable';
 
-declare let uuid; // this is a hack stop Typescript compilation problems when addressing the globally available uuid interface
+declare let uuid; // this is a hack to stop Typescript compilation problems when addressing the globally available uuid interface
 
 @Injectable()
 export class BetService {

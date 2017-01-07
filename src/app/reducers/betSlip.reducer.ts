@@ -9,6 +9,7 @@ import { BetReducer } from './bet.reducer';
 export const BetsReducer = (bets: Array<Bet> = [], action: Action) => {
   switch (action.type) {
     case Actions.ADD_BET:
+    case Actions.ADD_BET_FROM_SERVER:
       return [...bets, BetReducer(null, action)];
     case Actions.UPDATE_BET:
       return bets.map(bet => {
