@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actions } from '../models/actions.const';
+import { ActionTypes } from '../models/action.types.const';
 import { Store } from '@ngrx/store';
-import { User } from '../models/user.model';
 import { AppState } from '../models/state.model';
 import { BetTypes } from '../models/betTypes.enum';
 import 'node-uuid';
@@ -16,7 +15,7 @@ export class BetService {
   constructor(private store: Store<AppState>) { }
 
   initialise(): void {
-    this.store.dispatch({ type: Actions.INIT_BETS, payload: {} });
+    this.store.dispatch({ type: ActionTypes.INIT_BETS, payload: {} });
   }
 
   getBets(): Observable<Bet[]> {
@@ -25,6 +24,6 @@ export class BetService {
 
   addBet(title: string, description: string, cost: number, betType: BetTypes): void {
     // tslint:disable-next-line:max-line-length
-    this.store.dispatch({ type: Actions.ADD_BET, payload: { title: title, description: description, cost: cost, betType: betType, id: uuid.v1() } });
+    this.store.dispatch({ type: ActionTypes.ADD_BET, payload: { title: title, description: description, cost: cost, betType: betType, id: uuid.v1() } });
   }
 }

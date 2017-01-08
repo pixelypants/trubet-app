@@ -1,4 +1,4 @@
-export const Actions = {
+export const ActionTypes = {
   ADD_BET: 'add_bet_action',
   ADD_BET_FROM_SERVER: 'add_bet_from_server_action',
   REMOVE_BET: 'remove_bet_action',

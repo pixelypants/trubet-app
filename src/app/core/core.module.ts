@@ -4,7 +4,7 @@ import { SportsapiApi } from '../../assets/trubet-sports-ng2-client/api/api';
 import { UserService } from '../services/user.service';
 import { BetService } from '../services/bet.service';
 import { BetDataService } from '../services/bet.data.service';
-import { BetEffectsService } from '../services/bet.effects.service';
+import { BetEffectsService } from '../effects/bet.effects.service';
 
 @NgModule({
   imports: [
