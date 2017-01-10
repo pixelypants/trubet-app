@@ -37,5 +37,4 @@ export class BetEffectsService {
       .catch(() => Observable.of({ type: ActionTypes.FETCH_FAILED }))
     );
 
-
 }

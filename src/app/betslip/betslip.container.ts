@@ -5,8 +5,9 @@ import { BetService } from '../services/bet.service';
 
 @Component({
   selector: 'app-betslip',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
+    <div>Betslip</div>
     <app-bet-list 
       [bets]="bets$ | async">
     </app-bet-list>

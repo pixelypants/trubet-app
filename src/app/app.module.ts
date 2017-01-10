@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+// import { DBModule } from '@ngrx/db';
 
 import { BetDataService } from './services/bet.data.service';
 import { SharedModule } from './shared/shared.module';
@@ -13,6 +14,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { BetEffectsService } from './effects/bet.effects.service';
 import { BetslipModule } from './betslip/betslip.module';
 import { routing } from './app.routes';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+// import { schema } from './db';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,7 @@ import { routing } from './app.routes';
      * 
      * See: https://github.com/zalmoxisus/redux-devtools-extension
      */
-    // StoreDevtoolsModule.instrumentOnlyWithExtension(),
+    StoreDevtoolsModule.instrumentOnlyWithExtension(),
 
     /**
      * EffectsModule.run() sets up the effects class to be initialized

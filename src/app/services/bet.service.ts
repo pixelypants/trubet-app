@@ -11,15 +11,16 @@ declare let uuid; // this is a hack to stop Typescript compilation problems when
 
 @Injectable()
 export class BetService {
-
   constructor(private store: Store<AppState>) { }
 
   initialise(): void {
-    this.store.dispatch({ type: ActionTypes.INIT_BETS, payload: {} });
+    console.log(`INITIALISE`);
+    this.store.dispatch({ type: ActionTypes.INIT_BETS, payload: { bets: [] } });
   }
 
   getBets(): Observable<Bet[]> {
-    return this.store.select<Bet[]>('bets');
+    console.log(`GET BETS FROM STORE`);
+    return this.store.select<Bet[]>('Bets');
   }
 
   addBet(title: string, description: string, cost: number, betType: BetTypes): void {

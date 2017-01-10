@@ -22,7 +22,6 @@ export class BetDataService {
   }
 
   updateBet(bet: Bet): Observable<Bet> {
-    console.log(`BetsDataService updating bet ${bet.id} using path ${this.API_ROOT}/bets/${bet.id} note:${JSON.stringify(bet)}`)
     if (bet.id) {
       return this.http.put(`${this.API_ROOT}/bets/${bet.id}`, JSON.stringify(bet), this.JSON_HEADER)
         .map((response: Response) => response.json())

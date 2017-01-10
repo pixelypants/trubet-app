@@ -6,7 +6,7 @@ import { BetReducer } from './bet.reducer';
 // Takes: state (Current) + action (Type and Payload)
 // Returns: new state
 // Note: ... unpacks collection and makes it a new deep copy
-export const BetsReducer = (bets: Array<Bet> = [], action: Action) => {
+export const Bets = (bets: Array<Bet> = [], action: Action) => {
   switch (action.type) {
     case ActionTypes.ADD_BET:
     case ActionTypes.ADD_BET_FROM_SERVER:
