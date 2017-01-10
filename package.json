@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "backend": "json-server --watch backend/db.json --delay 2000"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,14 @@
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.15",
+    "@ngrx/core": "^1.0.0",
+    "@ngrx/db": "^2.0.0",
+    "@ngrx/effects": "^2.0.0",
+    "@ngrx/router-store": "^1.1.0",
+    "@ngrx/store": "^2.0.0",
+    "@ngrx/store-devtools": "^3.1.0",
     "core-js": "^2.4.1",
+    "node-uuid": "^1.4.7",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"
@@ -38,6 +46,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "ngrx-store-freeze": "^0.1.6",
     "protractor": "4.0.9",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",

@@ -1,4 +1,4 @@
-import { Bet } from './bets.model';
+import { Bet } from './bet.model';
 
 export interface BetSlip {
   bets: Bet[];
