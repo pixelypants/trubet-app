@@ -4,6 +4,11 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { SportsComponent } from './sports.component';
+import { CommonModule } from '@angular/common';
+import { SportsRouterModule } from './sports.routing';
+import { SharedModule } from '../shared/shared.module';
+
+import { SportsapiApi } from '../../assets/trubet-sports-ng2-client/api/api';
 
 describe('SportsComponent', () => {
   let component: SportsComponent;
@@ -11,7 +16,13 @@ describe('SportsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SportsComponent ]
+      imports: [
+        CommonModule
+        , SportsRouterModule
+        , SharedModule
+      ],
+      declarations: [SportsComponent],
+      providers: [ SportsapiApi ]
     })
     .compileComponents();
   }));
