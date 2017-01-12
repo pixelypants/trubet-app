@@ -4,6 +4,13 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { BetslipComponent } from './betslip.container';
+import { SharedModule } from '../shared/shared.module';
+import { BetComponent } from './components/bet.component';
+import { BetListComponent } from './components/bet.list.component';
+import { BetService } from '../services/bet.service';
+
+import * as APP_REDUCERS from '../reducers/reducers';
+import { StoreModule } from '@ngrx/store';
 
 describe('BetslipComponent', () => {
   let component: BetslipComponent;
@@ -11,7 +18,9 @@ describe('BetslipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BetslipComponent]
+      imports: [SharedModule, StoreModule.provideStore(APP_REDUCERS),],
+      declarations: [BetslipComponent, BetComponent, BetListComponent],
+      providers: [ BetService ]
     })
       .compileComponents();
   }));
