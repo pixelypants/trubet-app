@@ -1,2 +1,10 @@
 <h1>Todays Races</h1>
-<p>Racing features comming soon</p>
+
+<ngb-alert type="info" *ngIf="bet">
+  <strong>{{title}}</strong>
+  <span>{{description}}</span>
+  <strong>{{ cost | currency:"USD":true }}</strong>
+  <button (click)="addBet(bet)">
+      Add bet baby!
+    </button>
+</ngb-alert>

@@ -22,7 +22,8 @@ export class BetEffectsService {
   update$: Observable<Action> = this.actions$
     .ofType(ActionTypes.ADD_BET, ActionTypes.UPDATE_BET)
     .map(action => action.payload)
-    .mergeMap(bets => Observable.from(bets))
+    // tslint:disable-next-line:max-line-length
+    .mergeMap(bets => Observable.of(bets)) // changed 'from' to 'of' as only a single bet is added and threw errors TODO: look into passing an Observable array
     .filter((bet: Bet) => { return (bet.dirty === true); })
     .switchMap((updatedBet: Bet) => this.betDataService.addBet(updatedBet)
       .map((responseBet: Bet) => ({ type: ActionTypes.UPDATE_BET_FROM_SERVER, payload: { bet: responseBet } }))

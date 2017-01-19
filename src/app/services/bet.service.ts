@@ -3,11 +3,12 @@ import { ActionTypes } from '../models/action.types.const';
 import { Store } from '@ngrx/store';
 import { AppState } from '../models/state.model';
 import { BetTypes } from '../models/betTypes.enum';
-import 'node-uuid';
 import { Bet } from '../models/bet.model';
 import { Observable } from 'rxjs/Observable';
 
-declare let uuid; // this is a hack to stop Typescript compilation problems when addressing the globally available uuid interface
+// import 'node-uuid';
+let uuid = require('node-uuid');
+// declare let uuid; // this is a hack to stop Typescript compilation problems when addressing the globally available uuid interface
 
 @Injectable()
 export class BetService {

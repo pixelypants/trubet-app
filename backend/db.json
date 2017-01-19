@@ -5,22 +5,28 @@
   },
   "bets": [
     {
+      "id": "01",
       "title": "TeamX (WIN)",
       "description": "Melb. BB, TeamX vs TeamY",
       "cost": 12,
-      "type": "Sport"
+      "betType": "Sport",
+      "dirty": false
     },
     {
+      "id": "02",
       "title": "PlayerX (WIN)",
       "description": "Int. Tennis, PlayerX vs PlayerY",
       "cost": 7,
-      "type": "Sport"
+      "betType": "Sport",
+      "dirty": false
     },
     {
+      "id": "03",
       "title": "Horse #12 (WIN)",
       "description": "'Unleashed' to Win - 300 mtrs",
       "cost": 4,
-      "type": "Racing"
+      "betType": "Racing",
+      "dirty": false
     }
   ]
 }

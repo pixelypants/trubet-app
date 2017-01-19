@@ -17,6 +17,8 @@ import { routing } from './app.routes';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 // import { schema } from './db';
 
+var uuid = require('node-uuid');
+
 @NgModule({
   declarations: [
     AppComponent,

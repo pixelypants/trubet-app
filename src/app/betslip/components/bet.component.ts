@@ -11,12 +11,11 @@ import { Bet } from '../../models/bet.model';
   selector: 'app-bet',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div *ngIf="bet">
-      <span>{{id}}</span>
-      <span>{{title}}</span>
+    <ngb-alert type="info" *ngIf="bet">
+      <strong>{{title}}</strong>
       <span>{{description}}</span>
-      <span>{{cost}}</span>
-    </div>
+      <strong>{{ cost | currency:"USD":true }}</strong>
+    </ngb-alert>
   `,
 })
 export class BetComponent {
